@@ -6,9 +6,10 @@
   <body>
 
     {% include header.html %}
-
+<div class="silder"></div>
     <div class="page-content">
 	<div class='categor'>
+	<h2>分类<h2>
 {% for category in site.categories %}
 <h3 title="共{{ category | last | size }}篇">{{ category | first }}</h3>
 
@@ -23,6 +24,7 @@
 
  
 </div>
+
       <div class="wrapper">
         {{ content }}
       </div>
