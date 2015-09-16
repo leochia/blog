@@ -1,0 +1,34 @@
+---
+layout: default
+
+---
+<div id = "post" class="post">
+<div id="post-content"></div>
+</div>
+ 
+<script>
+var cate = new L.blog();
+cate.size = "{{ category | last | size }}";
+cate.posts=[];
+{% for category in site.categories %}
+ 
+ if("{{ category | first }}"==L.core.getparam("cat")){
+      {% for post in category.last %}
+	   cate.posts.push({date:"{{ post.date | date:"%b %-d, %Y"}}",url:"{{ post.url }}",title:"{{ post.title }}"})
+
+    {% endfor %}
+ }
+
+{% endfor %}
+var tar = document.getElementById("post-content");
+var html_=[];
+for(var i=0,il=cate.posts.length;i<il;i++){
+    html_.push('<div><span class="post-meta">');
+	html_.push(cate.posts[i].date+'</span>-<a href="');
+	html_.push(cate.posts[i].url+'">');
+	html_.push(cate.posts[i].title+"</a></div>");  
+}
+tar.innerHTML = html_.join(" ");
+
+//alert(cate.getCatagory(L.core.getparam("cat")))
+</script>

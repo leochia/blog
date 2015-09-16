@@ -5,6 +5,8 @@ description: > # this means to ignore newlines until "baseurl:"
   天之道，损有余而补不足。
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "/" # the base hostname & protocol for your site
+categroyhtml: "/showCategory.html"
+taghtml: "/showTag.html"
 twitter_username: jekyllrb
 github_username:  leochia
 
