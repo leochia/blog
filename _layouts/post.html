@@ -9,7 +9,7 @@ layout: default
     <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}
 	   &nbsp; &nbsp; &nbsp;标签:&nbsp;{% for post_tag in page.tags %}
  
-          &nbsp;<a href="{{ site.url }}/">{{ post_tag }}</a> 
+          &nbsp;<a href="{{site.taghtml}}?tag={{ post_tag }}">{{ post_tag }}</a> 
     {% endfor %}
 	</p>
 	

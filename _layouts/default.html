@@ -11,7 +11,10 @@
 	<div class='categor'>
 	<h2>分类<h2>
 {% for category in site.categories %}
-<h3 title="共{{ category | last | size }}篇"><a href="{{site.categroyhtml}}?cat={{ category | first }}">{{ category | first }}</h3>
+<h3 title="共{{ category | last | size }}篇">
+ <!-- 分类页面 <a href="{{site.categroyhtml}}?cat={{ category | first }}">{{ category | first }}</a>-->
+  <a href="javascript:void(0)">{{ category | first }}</a>
+  </h3>
 
 <ul class="arc-list">
     {% for post in category.last %}

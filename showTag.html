@@ -1,0 +1,34 @@
+---
+layout: default
+
+---
+<div id = "post" class="post">
+<div id="post-content" style="padding-top:15px"></div>
+</div>
+ 
+<script>
+var cate = new L.blog(); 
+cate.posts=[];
+{% for tag in site.tags %}
+ 
+ if("{{ tag[0] }}"==L.core.getparam("tag")){
+      {% for post in tag[1] %}
+	   cate.posts.push({date:"{{ post.date | date:"%b %-d, %Y"}}",url:"{{ post.url }}",title:"{{ post.title }}"})
+
+    {% endfor %}
+ }
+
+{% endfor %}
+var tar = document.getElementById("post-content");
+var html_=["搜索标签为\"<a href='#'>"+L.core.getparam("tag")+"</a>\"的文章如下：<p>"];
+for(var i=0,il=cate.posts.length;i<il;i++){
+    html_.push('<div><span class="post-meta">');
+	html_.push(cate.posts[i].date+'</span>-<a href="');
+	html_.push(cate.posts[i].url+'">');
+	html_.push(cate.posts[i].title+"</a></div>");  
+}
+html_.push("</p>")
+tar.innerHTML = html_.join(" ");
+
+//alert(cate.getCatagory(L.core.getparam("cat")))
+</script>

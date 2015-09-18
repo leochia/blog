@@ -3,7 +3,7 @@ layout: default
 
 ---
 <div id = "post" class="post">
-<div id="post-content"></div>
+<div id="post-content" style="padding-top:15px"></div>
 </div>
  
 <script>
@@ -21,7 +21,7 @@ cate.posts=[];
 
 {% endfor %}
 var tar = document.getElementById("post-content");
-var html_=[];
+var html_=["搜索到分类为\""+L.core.getparam("cat")+"\"的文章如下：<br>"];
 for(var i=0,il=cate.posts.length;i<il;i++){
     html_.push('<div><span class="post-meta">');
 	html_.push(cate.posts[i].date+'</span>-<a href="');
