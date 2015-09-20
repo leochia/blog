@@ -19,11 +19,19 @@ layout: default
   <article class="post-content">
     {{ content }}
   </article>
-
+<a href="{{ site.baseurl }}/index.html">返回首页</a>
 <!-- UY BEGIN -->
 <div id="uyan_frame"></div>
 <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2060744"></script>
 <!-- UY END -->
 
+<script>
+window.addEventListener("load",function(){
+  var co = document.getElementById("uyan-copyright");
+  if(co){
+   co.firstChild.firstChild.style.display= "none";
+  }
+},false);
+</script>
 </div>
-<a href="{{ site.baseurl }}/index.html">返回首页</a>
+
