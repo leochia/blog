@@ -12,3 +12,6 @@ github_username:  leochia
 
 # Build settings
 markdown: kramdown
+
+paginate: 3
+paginate_path: "page:num"
