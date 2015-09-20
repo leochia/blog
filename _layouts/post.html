@@ -27,10 +27,15 @@ layout: default
 
 <script>
 window.addEventListener("load",function(){
-  var co = document.getElementById("uyan-copyright");
+	try{
+		  var co = document.getElementById('uyan_frame')firstChild.contentWindow.document.getElementById("uyan-copyright");
   if(co){
    co.firstChild.firstChild.style.display= "none";
   }
+	}catch(e){
+	 console.log(e);
+	}
+
 },false);
 </script>
 </div>
