@@ -4,7 +4,7 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+  <h2 class="page-heading">Post</h2>
 
   <ul class="post-list">
     {% for post in paginator.posts %}
@@ -14,7 +14,7 @@ layout: default
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
-		<div class="nowrap">{{ post.excerpt | strip_html | strip_newlines | truncate:170 }}<div>
+		<div class="nowrap">{{ post.excerpt | strip_html | strip_newlines | truncate:470 }}<div>
       </li>
     {% endfor %}
   </ul>

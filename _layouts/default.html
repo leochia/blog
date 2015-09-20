@@ -9,22 +9,27 @@
 <div class="silder"></div>
     <div class="page-content">
 	<div class='categor'>
-	<h2>分类<h2>
+	<h2><span class='title'>Category<span></h2>
+	<ul>
 {% for category in site.categories %}
-<h3 title="共{{ category | last | size }}篇">
- <!-- 分类页面 <a href="{{site.categroyhtml}}?cat={{ category | first }}">{{ category | first }}</a>-->
-  <a href="javascript:void(0)">{{ category | first }}</a>
-  </h3>
+<li> 
+ <!-- 分类页面<a href="javascript:void(0)">{{ catego ry | first }}</a>-->
+  <a title='共{{ category | last | size }}篇' href="{{site.categroyhtml}}?cat={{ category | first }}">{{ category | first }}<span>{{ category | last | size }}</span></a>
+  
+  
+</li>
 
+{% endfor %}
+</ul>
+
+<br>
+<!--
 <ul class="arc-list">
-    {% for post in category.last %}
+    {% for post in cat egory.last %}
         <li><span class="post-meta">{{ post.date | date:"%b %-d, %Y"}}<span>-<a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
 </ul>
-{% endfor %}
-
-<br>
-
+-->
  
 </div>
 
