@@ -25,5 +25,38 @@
 -->
  
   </div>
+  <div class="menutitle">
+  <ul>
+    <a id="linkme">Link</a>
+	<li class=""><a href="/index.html">Home</a></li>
+	<li class=""><a href="/index.html?#backtop">Categroy</a></li>
+	<li class=""><a href="#" onclick="show(0)">Help</a></li>
+	<li class=""><a href="#" onclick="show(1)">About</a></li>
+</ul>
+</div>
 
 </header>
+<script>
+ var linkname = document.getElementById("linkme");
+ var linkul = linkname.parentNode;
+ var childs = linkul.childNodes;
+ linkname.addEventListener("mouseover",function(){
+    for(var i=1,il=childs.length;i<il;i++){
+		var t = childs[i];
+		if(t.tagName=="LI")
+	   t.className="showli"
+	}
+
+ },false);
+  document.body.addEventListener("mouseover",function(){
+    if(!linkul.contains(event.target)){
+	   for(var i=1,il=childs.length;i<il;i++){
+		var t = childs[i];
+		if(t.tagName=="LI")
+	   t.className=""
+	}
+	}
+
+ },false);
+  
+</script>
