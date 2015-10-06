@@ -1,6 +1,5 @@
-<header class="blankheader"></header>
 <header class="site-header">
-<div class="shadow_cover"></div>
+<div id = "shadow" class="shadow"></div>
 <div class="content">
   <div class="wrapper">
     <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}'s Blog</a>
@@ -37,6 +36,23 @@
 	}
 	}
 
+ },false);
+ var shadow = document.getElementById("shadow");
+   window.addEventListener("scroll",function(){
+	   var nowtop = document.body.scrollTop;
+	    if(nowtop<=50){
+	     shadow.style.opacity="0";
+	   }else if(nowtop<=100&&nowtop>50){
+	     shadow.style.opacity="0.2";
+	   }else if(nowtop>100&&nowtop<=200){
+         shadow.style.opacity="0.4";
+	   }else if(nowtop>200&&nowtop<=300){
+         shadow.style.opacity="0.6";
+	   }else if(nowtop>300&&nowtop<=400){
+         shadow.style.opacity="0.8";
+	   }else if(nowtop>400&&nowtop<=500){
+         shadow.style.opacity="1";
+	   }
  },false);
   
 </script>
