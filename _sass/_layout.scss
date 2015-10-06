@@ -225,6 +225,7 @@ padding-left:30px;
  */
 .page-content {
     padding: $spacing-unit 0;
+    min-height:400px;
 }
 
 .page-heading {
@@ -257,7 +258,8 @@ padding-left:30px;
   float:left;
   width:20%;
   height:100%;
-  maring:15px;
+  margin:15px;
+  min-width:200px;
 }
 .categor .title{
 display:block;
