@@ -10,6 +10,7 @@ tags:  github blog
 
 ###初识
 建博客之前觉得，太折腾，觉得不亚于维护一个小型网站了，总是习惯摘抄在evernote中，趁着阅兵放假大雨不能出门，开始阅读了阮一峰的[《搭建一个免费的，无限流量的Blog----github Pages和Jekyll入门》](http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html)，开始萌生了建立自己的github博客的想法。
+
 ###准备
 1. github 代码维护，开源项目托管
   依托于github 新建repository的gh-pages分支，内部引擎帮助我们生成静态网页。
